@@ -1,4 +1,11 @@
 package rest;
 
-public class TestSUper {
+import org.junit.Test;
+
+public class TestSuper {
+
+    @Test
+    public void testmethod() {
+        SubClass test = new SubClass();
+    }
 }
