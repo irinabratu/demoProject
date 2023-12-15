@@ -1,4 +1,4 @@
-package rest;
+package rest.section24;
 
 public class PracticeUserAddressPOJO {
 

@@ -1,6 +1,4 @@
-package rest;
-
-import java.util.Map;
+package rest.section24;
 
 public class PracticeUserPOJO {
 

@@ -1,4 +1,4 @@
-package rest;
+package rest.section24;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;

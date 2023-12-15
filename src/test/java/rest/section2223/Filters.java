@@ -1,4 +1,4 @@
-package rest;
+package rest.section2223;
 
 import org.junit.Before;
 import io.restassured.builder.ResponseSpecBuilder;
