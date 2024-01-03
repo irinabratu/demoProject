@@ -1,14 +1,12 @@
-package rest;
+package rest.oldChapters;
 
 import io.restassured.RestAssured;
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
-
-public class StaticImports {
+public class NonStaticImports {
 
     @Before
     public void init() {
@@ -20,14 +18,14 @@ public class StaticImports {
     @Test
     public void getProductByIdPrintRequestHeaders() {
 
-        given()
+        RestAssured.given()
                 .when()
                 .get("/products/4643")
                 .then()
                 .log()
                 .all()
                 .statusCode(200).
-                body("name", is(equalTo("Starbucks Coffee Variety Pack, 100% Arabica")),
-                        "manufacturer", is(equalTo("Starbucks")));
+                body("name", Matchers.is(Matchers.equalTo("Starbucks Coffee Variety Pack, 100% Arabica")),
+                        "manufacturer", Matchers.is(Matchers.equalTo("Starbucks")));
     }
 }

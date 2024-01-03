@@ -1,4 +1,4 @@
-package rest;
+package rest.oldChapters;
 
 public class MyClassImpl implements MyInterface{
     private MyInterface MyInterface;

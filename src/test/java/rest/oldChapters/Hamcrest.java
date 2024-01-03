@@ -1,4 +1,4 @@
-package rest;
+package rest.oldChapters;
 
 import org.junit.Test;
 

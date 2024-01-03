@@ -1,4 +1,4 @@
-package rest;
+package rest.oldChapters;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;

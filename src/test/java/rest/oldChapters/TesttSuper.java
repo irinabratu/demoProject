@@ -1,8 +1,8 @@
-package rest;
+package rest.oldChapters;
 
 import org.junit.Test;
 
-public class TestSuper {
+public class TesttSuper {
 
     @Test
     public void testmethod() {

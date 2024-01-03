@@ -8,7 +8,6 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Test;
-import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.io.FileNotFoundException;

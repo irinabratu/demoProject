@@ -1,25 +1,20 @@
-package rest;
+package rest.oldChapters;
 
-import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import io.restassured.specification.SpecificationQuerier;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
 
 
-public class DefaultResponseSpecification {
+public class RequestSpecBuilder {
 
+    RequestSpecification request;
+    ResponseSpecification response;
 
     @BeforeClass
     public void beforeClass() {
@@ -28,17 +23,17 @@ public class DefaultResponseSpecification {
                 addHeader("headerName", "value2").
                 addHeader("x-mock-match-request-headers", "headerName").
                 log(LogDetail.ALL);
-        RestAssured.requestSpecification = requestSpecBuilder.build();
+        request = requestSpecBuilder.build();
 
         ResponseSpecBuilder responseSpecBuilder = new ResponseSpecBuilder().
                 expectStatusCode(200).
                 expectContentType(ContentType.JSON).
                 log(LogDetail.ALL);
-        RestAssured.responseSpecification = responseSpecBuilder.build();
+        response = responseSpecBuilder.build();
     }
 
     @Test
     public void validate_get_status_code_bdd() {
-        get("/get");
+        given().spec(request).get("/get").then().spec(response);
     }
 }

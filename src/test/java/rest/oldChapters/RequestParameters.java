@@ -1,11 +1,8 @@
-package rest;
+package rest.oldChapters;
 
-import io.cucumber.java.hu.Ha;
 import org.junit.Test;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 

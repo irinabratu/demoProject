@@ -1,4 +1,4 @@
-package rest;
+package rest.oldChapters;
 
 import io.restassured.http.Header;
 import io.restassured.response.Response;
