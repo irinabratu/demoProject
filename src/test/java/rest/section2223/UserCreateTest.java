@@ -15,11 +15,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.matchesPattern;
 
-public class UserCreateTestt {
+public class UserCreateTest {
 
     RequestSpecification request;
     ResponseSpecification response;
-
 
     @BeforeClass
     public void beforeClass() {
